@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.password_manager.Controller">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <Label text="Type:"/>
+        <ComboBox fx:id="types" prefWidth="150"/>
+        <Label text="Name:"/>
+        <TextField fx:id="nameField" prefWidth="180"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Key / PIN:"/>
+        <TextField fx:id="keyField" prefWidth="250"/>
+        <CheckBox fx:id="caseSensitiveBox" text="Case Sensitive"/>
+        <Button fx:id="createBtn" text="Erstellen"/>
+    </HBox>
+
+    <Label text="Gespeicherte Einträge:"/>
+    <ListView fx:id="listView" VBox.vgrow="ALWAYS"/>
+
+</VBox>
