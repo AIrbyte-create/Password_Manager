@@ -3,7 +3,6 @@ package com.example.password_manager;
 import com.example.password_manager.pojos.KeyPin;
 import com.example.password_manager.pojos.KeyWord;
 import com.example.password_manager.pojos.Password;
-import com.example.password_manager.pojos.DataController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,7 +18,7 @@ public class Controller {
     @FXML private ListView<Password> listView;
 
     private final ObservableList<Password> items = FXCollections.observableArrayList();
-    private final DataController dataController = new DataController("passwords.txt");
+    private final DataController dataController = new DataController();
 
     @FXML
     public void initialize() {
